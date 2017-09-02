@@ -1,0 +1,278 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.BackGround{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: url(../img/bg.png) no-repeat 50% 50%;
+  top: 0;
+  display: flex;
+  background-size: cover;
+}
+
+  .BackGround .in1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15em;
+    width: 100%;
+    max-width: none;
+  }
+
+.content{
+  max-width: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+  .loading__request{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+  }
+
+    .loading__request .loading__gif{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      border-color: transparent;
+    }
+
+  .logo__marvel{
+    width: 256px;
+    height: 96px;
+    border: 2px solid white;
+    overflow: hidden;
+  }
+
+    .img__logo{
+      width: 256px;
+      height: 96px;
+    }
+  .content .btn__class{
+    margin-top: 20px;
+  }
+
+    .content .btn__s{
+      display: flex;
+      justify-content: space-between;
+    }
+
+  .btn__search{
+    display: flex;
+    justify-content: center;
+  }
+
+   .btn__class .input__text{
+      border-radius: 9px;
+      background-color: transparent;
+      padding: 0.6em;
+      color: #f9f3f4;
+      font-family: 'Century Gothic',sans-serif;
+      border: 3px solid;
+      font-weight: bold;
+    }
+      .input__text:focus{
+        outline: 0;
+      }
+
+   .btn__class .btn{
+      border-radius: 9px;
+      color: #f9f3f4;
+      text-decoration: none;
+      font-family: 'Century Gothic',sans-serif;
+      font-size: 14px;
+      border: 3px solid;
+      padding: 7px 13px;
+      font-weight: bold;
+    }
+
+   .btn__class .btn__refresh{
+     opacity: 0;
+     visibility: hidden;
+     -webkit-transition: opacity 600ms, visibility 600ms;
+     transition: opacity 600ms, visibility 600ms;
+  }
+
+     .btn:hover{
+        color: #2196f3;
+        cursor:default;
+      }
+
+    .Content__Cards{
+        background-color: black;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 500px) {
+          .Content__Cards {
+              background-color: lightblue;
+          }
+      }
+
+    @media (max-width: 699px) and (min-width: 520px) {
+            .Content__Cards {
+                background-color: lightblue;
+          }
+      }
+      .Paper__Card {
+          /* Add shadows to create the "card" effect */
+          border-radius: 5px;
+          width: 200px;
+          margin: 1rem;
+          box-shadow: 0 4px 8px 0 rgba(255,255,255,0.5);
+          transition: 0.3s;
+      }
+
+        /* On mouse-over, add a deeper shadow */
+        .Paper__Card:hover {
+            box-shadow: 0 12px 20px 0 rgba(255,255,255,0.5);
+        }
+
+        .img__Character{
+          border-radius: 5px 5px 0 0;
+          width: 200px;
+          height: 200px;
+        }
+
+      /* Add some padding inside the card container */
+      .container {
+          padding: 2px 16px;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+        .btn__more{
+          border: none;
+          color: white;
+          padding: 8px 4px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 12px;
+          margin-bottom: 10px;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+          background-color: transparent;
+          border: 2px solid white;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+          .btn__more:hover{
+            background-color: #f44336;
+            color: white;
+          }
+
+        .paragraph__content{
+          text-align: justify;
+        }
+
+        .title__content{
+          text-align: center;
+        }
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 600ms, visibility 600ms;
+        transition: opacity 600ms, visibility 600ms;
+        position: fixed; /* Stay in place */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: rgba(255,255,255,0.7); /* Black w/ opacity */
+        border-radius: 4px;
+        margin: auto;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        border: 2px solid white;
+        width: 30%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: gray;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+  .top{
+    opacity: 0;
+    visibility: hidden;
+  	position: fixed;
+  	top: 88%;
+  	left: 95%;
+  	padding: 2em;
+  	z-index: 1;
+    margin: 0 auto;
+  	background-color: transparent;
+  	background-image: url('../img/arrow.png');
+  	background-size: 3rem;
+  	background-repeat: no-repeat;
+  	border-radius: 8px;
+    border-color: gray;
+  }
+    .top:hover{
+  	  background-color: #8676764d;
+    }
+
+.title__Char{
+  display: none;
+  background-color: black;
+}
+
+  .title__Char .title__Marvel{
+    color: white;
+    font-family: 'Marvel';
+  	font-size: 5rem;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 500;
+  	line-height: 26.4px;
+  }
+
+  body {
+    background: #222;
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Api Marvel (AJAX)</title>
+</head>
+
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/api.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Marvel" />
+
+<body>
+  <section id="BackGround" class="BackGround">
+    <div class="in1">
+      <div class="content">
+        <div id="loading__request" class="loading__request">
+            <img class="loading__gif" src="img/spinner.gif" alt="">
+        </div>
+        <div class="logo__marvel">
+          <img class="img__logo" src="img/ml.png" alt="imagen">
+        </div>
+        <div class="btn__class btn__s">
+            <input id="search__value" class="input__text" type="text" name="" placeholder="Insert char here...">
+            <a class="btn" onClick="getMarvelData()">Search</a>
+        </div>
+        <div class="btn__class btn__search">
+          <a id="btn__refresh" class="btn btn__refresh" onClick="getRefresh()">Refresh</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="title__Char" class="title__Char">
+    <h1 class="title__Marvel">Characters List</h1>
+  </div>
+
+  <div id="Content__Cards" class="Content__Cards">
+
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span onclick="span__click()" class="close">&times;</span>
+      <div class="title__modal">
+        <h2 id="title__m" class="title__m"></h2>
+      </div>
+      <p id="text__description" class="paragraph__content"></p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
